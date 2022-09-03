@@ -8,12 +8,12 @@ function checkPorts {
 	else
 		echo "Port 3000 is OK"
 	fi
-	if ss -tulpen | awk '{print $5}' | grep -q ":9100$" ; then
-		echo -e "\e[31mInstallation is not possible, port 9100 already in use.\e[39m"
-		exit
-	else
-		echo "Port 9100 is OK"
-	fi
+	#if ss -tulpen | awk '{print $5}' | grep -q ":9100$" ; then
+	#	echo -e "\e[31mInstallation is not possible, port 9100 already in use.\e[39m"
+	#	exit
+	#else
+	#	echo "Port 9100 is OK"
+	#fi
 	if ss -tulpen | awk '{print $5}' | grep -q ":9090$" ; then
 		echo -e "\e[31mInstallation is not possible, port 9090 already in use.\e[39m"
 		exit
